@@ -1,4 +1,3 @@
-import pafy
 import cv2
 from config import youtube_key
 
