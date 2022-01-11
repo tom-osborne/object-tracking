@@ -2,12 +2,9 @@ import pafy
 import cv2
 from config import youtube_key
 
-video_url = 'https://www.youtube.com/watch?v=Gr0HpDM8Ki8'
+video = 'data/traffic.mp4'
 
-video = pafy.new(video_url)
-video_best = video.getbest(preftype='mp4')
-
-capture = cv2.VideoCapture(video_best.url)
+capture = cv2.VideoCapture(video)
 
 while(capture.isOpened()):
     # Capture frame-by-frame
@@ -30,4 +27,3 @@ capture.release()
     
 # Closes all the frames
 cv2.destroyAllWindows()
-
